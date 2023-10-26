@@ -14,7 +14,8 @@ const fplus = await new ServiceClient({
 
 const monitor = await new Monitor({
     fplus,
-    node: process.env.AGENT_UUID,
+    node:           process.env.AGENT_UUID,
+    deployment:     process.env.AGENT_DEPLOYMENT,
 }).init();
 
 monitor.run();
